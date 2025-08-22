@@ -17,5 +17,12 @@ def home():
         
     return render_template('index.html', author=author_name)
 
+@app.route('/andrei')
+def andrei():
+    """
+    Custom route for Andrei
+    """
+    return f"<h1>Hello, this is Andrei's page!</h1><p>Welcome to my custom route.</p>"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
